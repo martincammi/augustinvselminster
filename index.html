@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Badges</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .avatar {
+            width: 100%;
+            max-width: 100%; /* Ensures it takes full width */
+            height: auto; /* Maintains aspect ratio */
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        .badge-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        img.badge {
+            width: 50px; /* Adjust size as needed */
+            height: auto; /* Maintains aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="background-color: #f0f0f0;">
+        <h2>Augustin</h2>
+        <img src="augustin.jpg" alt="Augustin's Avatar" class="avatar" title="14 September 2024">
+        <h2>Badges</h2>
+        <div class="badge-container">
+            <img src="Won.png" alt="Win Badge" class="badge" title="14 September 2024">
+        </div>
+    </div>
+    <div class="container" style="background-color: #d0d0d0;">
+        <h2>Elminster</h2>
+        <img src="elminster.jpg" alt="Elminster's Avatar" class="avatar" title="14 September 2024">
+        <h2>Badges</h2>
+        <div class="badge-container">
+            <img src="Lost.png" alt="Lose Badge" class="badge" title="14 September 2024">
+        </div>
+    </div>
+</body>
+</html>
+
