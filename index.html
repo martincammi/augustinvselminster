@@ -10,6 +10,7 @@
             margin: 0;
             height: 100vh;
             font-family: Arial, sans-serif;
+            position: relative; /* Enable absolute positioning for children */
         }
         .container {
             width: 50%;
@@ -36,15 +37,56 @@
             width: 50px; /* Adjust size as needed */
             height: auto; /* Maintains aspect ratio */
         }
+        .battle-log {
+            font-size: 24px; /* Adjust size as needed */
+            font-weight: bold;
+            position: absolute; /* Allow positioning within the parent */
+            top: 230px; /* Adjusted position below the timer */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust for center alignment */
+            background-color: rgba(255, 255, 255, 0.7); /* Optional: semi-transparent background */
+            padding: 5px; /* Optional: padding around text */
+            border-radius: 5px; /* Optional: rounded corners */
+        }
+        .time-to-next {
+            font-size: 20px; /* Adjust size as needed */
+            font-weight: bold;            
+	    text-align: center;
+            position: absolute; /* Allow positioning within the parent */
+            top: 10px; /* Adjusted position above Battle Log */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust for center alignment */
+            background-color: rgba(255, 255, 255, 0.7); /* Optional: semi-transparent background */
+            border-radius: 5px; /* Optional: rounded corners */
+        }
+        .timer {
+            position: absolute; /* Allow positioning within the parent */
+            top: 30px; /* Adjusted position below Time to next encounter */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust for center alignment */
+        }
     </style>
 </head>
 <body>
+    <div class="time-to-next">Time to next encounter</div>
+    <div class="timer">
+        <table align="center">
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://gen.sendtric.com/countdown/ztx9fng9a1" style="display: block; width: 300px; height: auto;" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="battle-log">Battle Log</div>
     <div class="container" style="background-color: #f0f0f0;">
         <h2>Augustin</h2>
         <img src="augustin.jpg" alt="Augustin's Avatar" class="avatar" title="14 September 2024">
         <h2>Badges</h2>
         <div class="badge-container">
-            <img src="Won.png" alt="Win Badge" class="badge" title="14 September 2024">
+            <img src="Won.png" alt="Won Badge" class="badge" title="14 September 2024">
         </div>
     </div>
     <div class="container" style="background-color: #d0d0d0;">
@@ -52,7 +94,7 @@
         <img src="elminster.jpg" alt="Elminster's Avatar" class="avatar" title="14 September 2024">
         <h2>Badges</h2>
         <div class="badge-container">
-            <img src="Lost.png" alt="Lose Badge" class="badge" title="14 September 2024">
+            <img src="Lost.png" alt="Lost Badge" class="badge" title="14 September 2024">
         </div>
     </div>
 </body>
