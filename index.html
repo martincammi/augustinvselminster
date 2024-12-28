@@ -30,12 +30,15 @@
         }
         .badge-container {
             display: flex;
-	    justify-content: center; /* Center badges horizontally */
-	    flex-wrap: wrap; /* Allow badges to wrap to the next line if necessary */
-	    gap: 10px; /* Optional: Adds space between the badges */
-	    width: 100%; /* Ensures badges take up full width */
-	    margin-top: 10px; /* Adds some space between the badges and the title */
+		    justify-content: center; /* Center badges horizontally */
+		    flex-wrap: wrap; /* Allow badges to wrap to the next line if necessary */
+		    gap: 10px; /* Optional: Adds space between the badges */
+		    width: 100%; /* Ensures badges take up full width */
+		    margin-top: 10px; /* Adds some space between the badges and the title */
         }
+        .badge-container img {
+		    object-fit: contain; /* Ensure images are not stretched */
+		}
         img.badge {
             width: 50px; /* Adjust size as needed */
             height: auto; /* Maintains aspect ratio */
@@ -68,16 +71,23 @@
             left: 50%; /* Center horizontally */
             transform: translateX(-50%); /* Adjust for center alignment */
         }
+        .stacked-badges {
+		    display: block;
+		    margin-top: 10px; /* Adds space between the regular badges and the stacked ones */
+		}
+		.stacked-badges img {
+		    margin-bottom: 5px; /* Adds space between the two stacked images */
+		}
     </style>
 </head>
 <body>
-    <div class="time-to-next" style="display: block;">Time to next encounter</div>
+    <!--<div class="time-to-next" style="display: block;">Time to next encounter</div>-->
     <div class="timer">
         <table align="center" style="display: block;">
             <tbody>
                 <tr>
                     <td>
-                        <img src="https://gen.sendtric.com/countdown/95k7dd68jt" style="display: block; width: 300px; height: auto;" />
+                        <!--<img src="https://gen.sendtric.com/countdown/95k7dd68jt" style="display: block; width: 300px; height: auto;" />-->
                     </td>
                 </tr>
             </tbody>
@@ -90,8 +100,13 @@
         <h2>Badges</h2>
         <div class="badge-container">
             <img src="Won.png" style="display: block; width: 50px; height: auto;" alt="Won Badge" class="badge" title="14 September 2024">
-    	   <img src="Won.png" style="display: block; width: 50px; height: auto;" alt="Won Badge" class="badge" title="5 October 2024">
-	   <img src="Won.png" style="display: block; width: 50px; height: auto;" alt="Won Badge" class="badge" title="9 November 2024">
+    	   	<img src="Won.png" style="display: block; width: 50px; height: auto;" alt="Won Badge" class="badge" title="5 October 2024">
+	   		<img src="Won.png" style="display: block; width: 50px; height: auto;" alt="Won Badge" class="badge" title="9 November 2024">
+	   		<img src="Lost.png" style="display: block; width: 50px; height: auto;" alt="Lost Badge" class="badge" title="14 December 2024">
+	   		<div class="stacked-badges">
+		   		<img src="Lost.png" style="display: block; width: 50px; height: auto;" alt="Lost Badge" class="badge" title="27 December 2024">
+		   		<img src="Lost.png" style="display: block; width: 50px; height: auto;" alt="Lost Badge" class="badge" title="27 December 2024">
+			</div>
         </div>
     </div>
     <div class="container" style="background-color: #d0d0d0;">
@@ -100,8 +115,13 @@
         <h2>Badges</h2>
         <div class="badge-container">
             <img src="Lost.png" style="display: block; width: 50px; height: auto;" alt="Lost Badge" class="badge" title="14 September 2024">
- 	    <img src="Lost.png" style="display: block; width: 50px; height: auto;" alt="Lost Badge" class="badge" title="5 October 2024">
-	    <img src="Lost.png" style="display: block; width: 50px; height: auto;" alt="Lost Badge" class="badge" title="9 November 2024">
+ 	    	<img src="Lost.png" style="display: block; width: 50px; height: auto;" alt="Lost Badge" class="badge" title="5 October 2024">
+	    	<img src="Lost.png" style="display: block; width: 50px; height: auto;" alt="Lost Badge" class="badge" title="9 November 2024">
+	    	<img src="Won.png" style="display: block; width: 50px; height: auto;" alt="Won Badge" class="badge" title="14 December 2024">
+	    	<div class="stacked-badges">
+		    	<img src="Won.png" style="display: block; width: 50px; height: auto;" alt="Won Badge" class="badge" title="27 December 2024">
+		    	<img src="Won.png" style="display: block; width: 50px; height: auto;" alt="Won Badge" class="badge" title="27 December 2024">
+	    	</div>
         </div>
     </div>
 </body>
